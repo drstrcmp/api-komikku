@@ -13,30 +13,3 @@
     }
   ]
 }
-```
-**Catatan Penting:** Jika nama file utama di GitHub Anda bukan `main.go` (misal `app.go`), ganti tulisan `"src": "main.go"` dan `"dest": "/main.go"` di atas menjadi `"src": "app.go"` dan `"dest": "/app.go"`.
-
-5.  Klik **Commit changes**.
-
-### 3. Deploy Ulang di Vercel
-
-1.  Buka Dashboard **Vercel**.
-2.  Masuk ke project API tersebut.
-3.  Masuk ke tab **Deployments**.
-4.  Anda akan melihat Vercel sedang otomatis mencoba deploy ulang karena ada file baru (`vercel.json`).
-5.  Tunggu hingga statusnya **Ready** (Hijau).
-
-### 4. Tes Link API
-
-Setelah hijau, klik tombol **Visit** atau copy domainnya (misal `https://api-saya.vercel.app`).
-Coba tambahkan path di belakangnya untuk mengetes, misalnya: `/` atau `/api`.
-
-Jika muncul tulisan JSON (bukan 404), berarti **BERHASIL!** 🎉
-
-### 5. Update di Website CatKuy
-
-Jangan lupa update `BASE_URL` di file `App.jsx` website CatKuy Anda dengan link Vercel yang baru ini.
-
-```javascript
-// Di file App.jsx
-const BASE_URL = 'https://api-komik-vercel-anda.vercel.app';
